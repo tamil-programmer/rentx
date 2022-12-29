@@ -1,0 +1,231 @@
+* {
+    padding: 0;
+    margin: 0;
+font-family: 'Teko', sans-serif;
+    
+}
+
+.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Exo 2", sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #00c7ec;
+    border: 1px solid #00c7ec;
+    border-radius: 5px;
+    line-height: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+  }
+  .button:hover {
+    color: white;
+    box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5);
+    background-color: #00c7ec;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .button:hover:before {
+    -webkit-animation: shine 0.5s 0s linear;
+    -moz-animation: shine 0.5s 0s linear;
+    animation: shine 0.5s 0s linear;
+  }
+  .button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+  }
+  .button:before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+  
+  @-webkit-keyframes shine {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  @-moz-keyframes shine {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  @keyframes shine {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+    50% {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+.buttonpp {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    /* padding: 15px 32px; */
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    margin: 2px;
+    padding: 7px;
+  }
+#loady{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    margin: 0;padding: 0;
+    z-index: 999;
+}
+  .rbtn{
+    background-color: #4CAF50; /* Green */
+
+  }
+  .cbtn{
+    background-color: #1ea2d6; /* Green */
+
+  }
+
+  .bbtn{
+    background-color: #be072e; /* Green */
+
+  }
+
+  .button:active {
+    box-shadow:7px 6px 28px 1px rgba(0, 0, 0, 0.541);
+    transform: translateY(4px);
+    /* Moving button 4px to y-axis */
+}
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+ html {
+background-image: url(../assests/q.jpg);
+background-repeat: unset;
+background-size: cover;
+
+
+}
+
+a{
+    text-decoration-line: none;
+
+}
+.nav{
+    width: 100%;
+    margin-top: 20px;
+
+}
+.nav ul {
+
+    display: flex;
+    /* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZHRUNAsIRmz-jCi5sgIo6VtNpUWVQar0a5Q&usqp=CAU"); */justify-content: center;
+border-radius: 50px;
+    width: 80%;
+    margin: auto;
+    /* color: ; */
+}
+.nav ul li{
+    list-style-type: none;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.nav ul li:hover{
+    transition: 1s;
+    color: blueviolet;
+}
+
+.g{
+    background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 2px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.scanner p {
+    color: transparent;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+}
+.scanner p::before {
+    content: "Loading...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 4px solid white;
+    overflow: hidden;
+    color: white;
+    animation: load 2s linear infinite;
+}
+@keyframes load {
+    0%, 10%, 100% {
+        width: 0;
+   }
+    10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+        border-right-color: transparent;
+   }
+    11%, 21%, 31%, 41%, 51%, 61%, 71%, 81%, 91% {
+        border-right-color: white;
+   }
+    60%, 80% {
+        width: 100%;
+   }
+}

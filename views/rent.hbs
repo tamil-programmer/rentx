@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Rent</title>
+    <script src="js/j1.js"></script>
+</head>
+<body onload="loaded()">
+    <main id="loady">
+        <div class="loader">
+          <div class="scanner">
+            <p>Loading...</p>
+          </div>
+        </div>
+      </main>
+
+{{>nav}}
+
+
+<center>
+<div>
+
+<select class="buttonpp" name="" id="" onchange="window.location.href=this.value;">
+    <option value="" >Select</option>
+
+  {{#each cat}}
+    <option value="/rent?request={{cat}}" ><h1>{{cat}}</h1></option>
+    {{/each}}
+</select>
+</div>
+</center>
+
+
+<h2>
+
+
+
+<div style="width: 96%; display:flex;flex-wrap: wrap; margin: auto;">
+  {{#each r}}
+
+ 
+
+
+
+<div style="background-color: azure; border-top-right-radius: 20px;border-top-left-radius: 20px; margin: 7px;">
+  <center>
+<h4>  {{this.oname}}</h4>
+<hr>
+<img style="width: 150px;height: 150px;" src="{{this.oimg}}" alt="">
+  </center>
+  <hr>
+  <p style="font-size: small;">owner :   {{this.ouploader}}</p>
+  <div style="width: 100%; display: flex; margin: auto;justify-content: center;">
+  <a href="/add/addtocart?oid={{this.oid}}"><button class="buttonpp cbtn">Cart</button></a>
+  <a href="/rent?oid={{this.oid}}"><button class="buttonpp rbtn">Rent IT</button></a>
+  <a href="/add/addtocart?oid={{this.oid}}"><button class="buttonpp bbtn">Block</button></a>
+</div>
+</div>
+
+
+  {{/each}}
+
+
+</div>
+</h2>
+
+
+
+</body>
+</html>
+
